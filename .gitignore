@@ -39,3 +39,6 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+# Secure Tokens etc.
+/src/app/services/firebase-config-object.ts

@@ -16,8 +16,7 @@
             <li *ngIf="(af.auth | async)"><a [routerLink]="['/add-listings']">Add Listings</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li>{{ (af.auth | async)?.uid }}</li>
-            <li *ngIf="!(af.auth | async)"><a (click)="login()" >Login</a></li>
+            <!--<li *ngIf="!(af.auth | async)"><a (click)="login()" >Login</a></li>-->
             <li *ngIf="(af.auth | async)"><a (click)="logout()" >Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->

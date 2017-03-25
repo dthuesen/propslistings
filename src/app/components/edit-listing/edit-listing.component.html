@@ -1,3 +1,38 @@
-<p>
-  edit-listing works!
-</p>
+<a [routerLink]="['/listings']">Go Back</a>
+<br>
+<h2 class="page-header">Edit the Listing</h2>
+<form (submit)="onEditSubmit()">
+  <div class="form-group">
+    <label>Titel</label>
+    <input class="form-control" type="text" [(ngModel)]="title" name="title" required>
+  </div>
+  <div class="form-group">
+    <label>City</label>
+    <input class="form-control" type="text" [(ngModel)]="city" name="city" required>
+  </div>
+  <div class="form-group">
+    <label>Owner</label>
+    <input class="form-control" type="text" [(ngModel)]="owner" name="owner" required>
+  </div>
+  <div class="form-group">
+    <label>Bedrooms</label>
+    <input class="form-control" type="number" [(ngModel)]="bedrooms" name="bedrooms" required>
+  </div>
+  <div class="form-group">
+    <label>Type</label>
+    <select class="form-control" type="text" [(ngModel)]="type" name="type" >
+      <option value="Estate">Estate</option>
+      <option value="Estate">Condo</option>
+      <option value="Estate">Apartment</option>
+      <option value="Estate">Tent</option>
+    </select>
+  </div>
+  <!-- <div class="form-group">
+    <input id="image" name="image" [(ngModel)]="image" type="file">
+  </div> -->
+  <div class="form-group">
+    <label>Price</label>
+    <input class="form-control" type="number" [(ngModel)]="price" name="price" >
+  </div>
+  <input type="submit" value="submit" class="btn btn-success">
+</form>
